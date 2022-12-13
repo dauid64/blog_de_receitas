@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_list_or_404, get_object_or_404
 from recipes.models import Recipe
+from django.http import Http404
 
 
 def home(request):
@@ -18,3 +19,10 @@ def recipe(request, id):
     # recipe = Recipe.objects.filter(id=id)
     recipe = get_object_or_404(Recipe.objects.filter(id=id, is_published=True))
     return render(request, 'recipes/pages/recipe-view.html', context={'recipe': recipe, 'is_detail_page': True})    # noqa: E501
+
+
+def search(request):
+    search_term = request.GET.get('search')
+    if not search_term:
+        raise Http404()
+    return render(request, 'recipes/pages/search.html')
