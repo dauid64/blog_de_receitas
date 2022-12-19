@@ -21,8 +21,8 @@ def strong_password(password):
             'Password must have at least one uppercase letter, '
             'one lowercase letter and one number. The length should be '
             'at least 8 characters.'
-        ),
-        code='Invalid'
+            ),
+            code='Invalid'
         )
 
 
@@ -36,8 +36,20 @@ class RegisterForm(forms.ModelForm):
         add_placeholder(self.fields['password'], 'Type your password')
         add_placeholder(self.fields['password2'], 'Repeat your password')
 
+    first_name = forms.CharField(
+        error_messages={'required': 'Write your first name'},
+        label='First Name'
+    )
+    last_name = forms.CharField(
+        error_messages={'required': 'Write your last name'},
+        label='Last Name'
+    )
+    email = forms.CharField(
+        error_messages={'required': 'E-mail is required'},
+        label='E-mail',
+        help_text='The e-mail must be valid.'
+    )
     password = forms.CharField(
-        required=True,
         widget=forms.PasswordInput(),
         error_messages={
             'required': 'Password must not be empty'
@@ -51,8 +63,8 @@ class RegisterForm(forms.ModelForm):
         label='Password'
     )
     password2 = forms.CharField(
-        required=True, 
         widget=forms.PasswordInput(),
+        error_messages={'required': 'Please, repeat your password'},
         label='Confirm Password')
 
     class Meta:
@@ -67,13 +79,7 @@ class RegisterForm(forms.ModelForm):
         #   exclude = []
         labels = {
             'username': 'Username',
-            'first_name': 'First Name',
-            'last_name': 'Last Name',
-            'email': 'E-mail',
         }
-        help_texts = {
-            'email': 'The e-mail must be valid.'
-            }
         error_messages = {
             'username': {
                 'required': 'This field must not be empty',

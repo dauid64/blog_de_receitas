@@ -19,5 +19,5 @@ def register_create(request):
     if form.is_valid():
         form.save()
         messages.success(request, 'Your user is created, please log in.')
-        del(request.session['register_form_data'])
+        del (request.session['register_form_data'])
     return redirect('authors:register')
