@@ -11,7 +11,7 @@ class PaginationTest(RecipeTestBase):
 
     def test_pagination_dont_is_numeric(self):
         response = self.client.get(reverse('recipes:home') + '?page=A')
-        pages = response.context['pages']  # response.context['recipes'].number
+        pages = response.context['pages']
         self.assertEqual(1, pages['current_page'])
 
     def test_pagination_is_stop_range_correctly(self):

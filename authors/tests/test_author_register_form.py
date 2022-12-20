@@ -22,7 +22,6 @@ class AuthorRegisterFormUnitTest(TestCase):
         self.assertEqual(current_placeholder, placeholder)
 
     @parameterized.expand([
-        ('username', 'Username must have letters, numbers or one of those @+.-_.The length should be between 4 and 150 characteres'),  # noqa: E501
         ('email', 'The e-mail must be valid.'),
         ('password', ('Password must have at least one uppercase letter, '
                       'one lowercase letter and one number. '
@@ -74,6 +73,7 @@ class AuthorRegisterFormIntegrationTest(DjangoTestCase):
         # follow é para seguir o redirecionamento da pagina
         response = self.client.post(url, data=self.form_data, follow=True)
         self.assertIn(msg, response.content.decode('utf-8'))
+<<<<<<< HEAD
 
     def test_username_field_min_length_should_be_4(self):
         self.form_data['username'] = 'joa'
@@ -152,3 +152,5 @@ class AuthorRegisterFormIntegrationTest(DjangoTestCase):
             password='@Bc123456'
         )
         self.assertTrue(is_authenticated)
+=======
+>>>>>>> parent of 98f1d0f (refatoramento e tests)
