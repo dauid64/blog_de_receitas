@@ -1,10 +1,13 @@
 {% extends 'global/base.html' %}
 
-{% block title %}Register | {% endblock title %}
+{% block title %}Login | {% endblock title %}
 
 {% block content %}
     <div class="main-content center container">
-        <h2>Register</h2>
+        <h2>Login</h2>
+        {% if request.user.is_authenticated %}
+            <p>You are logged in with {{ request.user.username }}</p>
+        {% endif %}
     </div>
     {% include 'global/partials/message.html' %}
     {% include 'global/partials/form.html' %}
