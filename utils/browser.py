@@ -20,10 +20,3 @@ def make_chrome_browser(*options):
     chrome_service = Service(executable_path=CHROMEDRIVER_PATH)
     browser = webdriver.Chrome(service=chrome_service, options=chrome_options)
     return browser
-
-
-if __name__ == '__main__':
-    browser = make_chrome_browser('--headless')
-    browser.get('http://www.udemy.com/')
-    sleep(5)
-    browser.quit()
