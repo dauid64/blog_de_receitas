@@ -1,12 +1,10 @@
 from django.shortcuts import render, redirect
-from .forms import RegisterForm
+from .forms import RegisterForm, LoginForm
 from django.http import Http404
 from django.contrib import messages
 from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-
-from .forms import RegisterForm, LoginForm
 
 
 def register_view(request):
@@ -69,8 +67,11 @@ def login_create(request):
 @login_required(login_url='authors:login', redirect_field_name='next')
 def logout_view(request):
     if not request.POST:
+        messages.error(request, 'Invalid logout request')
         return redirect(reverse('authors:login'))
     if request.POST.get('username') != request.user.username:
+        messages.error(request, 'Invalid logout user')
         return redirect(reverse('authors:login'))
+    messages.success(request, 'Logged out successfully')
     logout(request)
     return redirect(reverse('authors:login'))
