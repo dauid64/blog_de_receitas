@@ -7,7 +7,7 @@ from .test_recipe_base import RecipeTestBase
 class CategoryViewsTest(RecipeTestBase):
     def test_category_view_function_is_correct(self):
         view = resolve(reverse('recipes:category', kwargs={'category_id': 1}))
-        self.assertIs(view.func, views.category)
+        self.assertIs(view.func.view_class, views.RecipeListViewCategory)
 
     def test_category_view_return_status_code_404_if_no_recipe_found(self):
         response = self.client.get(
@@ -20,7 +20,12 @@ class CategoryViewsTest(RecipeTestBase):
         # Need a recipe for this test
         self.make_recipe(title=needed_title)
 
-        response = self.client.get(reverse('recipes:category', kwargs={'category_id': 1}))      # noqa: E501
+        response = self.client.get(
+            reverse(
+                'recipes:category',
+                kwargs={'category_id': 1}
+            )
+        )
         response_content = response.content.decode('utf-8')
 
         # Check if one recipe exists

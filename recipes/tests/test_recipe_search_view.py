@@ -8,7 +8,7 @@ from .test_recipe_base import RecipeTestBase
 class SearchViewsTest(RecipeTestBase):
     def test_search_view_function_is_correct(self):
         view = resolve(reverse('recipes:search'))
-        self.assertIs(view.func, views.search)
+        self.assertIs(view.func.view_class, views.RecipeListViewSearch)
 
     def test_search_loads_correct_template(self):
         response = self.client.get(reverse('recipes:search') + '?search=teste')
@@ -27,12 +27,17 @@ class SearchViewsTest(RecipeTestBase):
         title1 = 'This is recipe one'
         title2 = 'This is recipe two'
 
-        recipe1 = self.make_recipe(slug='one', title=title1, author_data={'username': 'one'})
-        recipe2 = self.make_recipe(slug='two', title=title2, author_data={'username': 'two'})
+        recipe1 = self.make_recipe(
+            slug='one', title=title1, author_data={'username': 'one'})
+        recipe2 = self.make_recipe(
+            slug='two', title=title2, author_data={'username': 'two'})
 
-        response1 = self.client.get(reverse('recipes:search') + f'?search={title1}')
-        response2 = self.client.get(reverse('recipes:search') + f'?search={title2}')
-        response_both = self.client.get(reverse('recipes:search') + f'?search=this')
+        response1 = self.client.get(
+            reverse('recipes:search') + f'?search={title1}')
+        response2 = self.client.get(
+            reverse('recipes:search') + f'?search={title2}')
+        response_both = self.client.get(
+            reverse('recipes:search') + f'?search=this')
 
         self.assertIn(recipe1, response1.context['recipes'])
         self.assertNotIn(recipe2, response1.context['recipes'])
