@@ -16,7 +16,7 @@
                         <form class="inline-form form-delete" action="{% url 'authors:dashboard_recipe_delete' %}" method='POST'>
                             {% csrf_token %}
                             <input type="hidden" name="id" value="{{ recipe.id }}">
-                            <button class="plaintext-button" type="submit">❌</button>
+                            <button class="plaintext-button button-delete" type="submit">❌</button>
                         </form>
                     </li>
                 {% empty %}

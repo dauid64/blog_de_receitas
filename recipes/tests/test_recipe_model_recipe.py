@@ -34,4 +34,11 @@ class RecipeModelTest(RecipeTestBase):
         self.recipe.title = needed
         self.recipe.full_clean()
         self.recipe.save()
-        self.assertEqual(str(self.recipe), 'Testing Representation', msg=f"Recipe string representation must be {needed}")
+        self.assertEqual(str(self.recipe), 'Testing Representation',
+                         msg=f"Recipe string representation must be {needed}")
+
+    def test_recipe_if_slug_is_none_autofill(self):
+        self.recipe.slug = ''
+        self.recipe.full_clean()
+        self.recipe.save()
+        self.assertEqual(self.recipe.slug, 'recipe-title')

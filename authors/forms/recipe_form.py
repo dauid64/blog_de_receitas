@@ -4,6 +4,7 @@ from utils.django_forms import add_attr
 from collections import defaultdict
 from django.core.exceptions import ValidationError
 from utils.strings import is_positive_number
+from utils.django_forms import add_placeholder
 
 
 class AuthorRecipeForm(forms.ModelForm):
@@ -11,6 +12,11 @@ class AuthorRecipeForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self._my_errors = defaultdict(list)
         add_attr(self.fields.get('preparation_steps'), 'class', 'span-2')
+        add_placeholder(self.fields['title'], 'Your recipe title')
+        add_placeholder(self.fields['description'], 'Description of your recipe')
+        add_placeholder(self.fields['preparation_time'], 'How long does it take')
+        add_placeholder(self.fields['servings'], 'The amount')
+        add_placeholder(self.fields['preparation_steps'], 'Your recipe')
 
     class Meta:
         model = Recipe
@@ -43,7 +49,6 @@ class AuthorRecipeForm(forms.ModelForm):
         cleanded_data = self.cleaned_data
         title = cleanded_data.get('title')
         description = cleanded_data.get('description')
-
         if title == description:
             self._my_errors['title'].append('Cannot be equal to description')
             self._my_errors['description'].append('Cannot be equal to title')

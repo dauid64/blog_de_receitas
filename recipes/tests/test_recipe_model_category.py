@@ -15,4 +15,3 @@ class RecipeModelTest(RecipeTestBase):
         self.category.name = 'A' * 70
         with self.assertRaises(ValidationError):
             self.category.full_clean()
-            

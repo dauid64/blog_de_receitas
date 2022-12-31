@@ -52,7 +52,6 @@ class DashboardRecipe(View):
             files=request.FILES or None,
             instance=recipe
         )
-
         if form.is_valid():
             recipe = form.save(commit=False)
             recipe.author = request.user
