@@ -1,4 +1,4 @@
 # Site_Receitas_Django
-Site desenvolvido utilizando o Framework Django baseado em um curso que estou realizando de desenvolvimento Web utilizando Python
+Site desenvolvido utilizando o Framework Django baseado em um curso que estou realizando de desenvolvimento Web utilizando Python.
 
-site publicado no link: http://34.170.85.28
+Esse site simula um forum de receitas onde pessoas podem logar, deslogar, criar, editar e excluir receitas para ser postadas no site.
