@@ -15,7 +15,7 @@ urlpatterns = [
         name="search"
     ),
     path(
-        'recipes/category/<int:category_id>',
+        'recipes/category/<int:category_id>/',
         views.RecipeListViewCategory.as_view(),
         name="category"
     ),
@@ -30,8 +30,18 @@ urlpatterns = [
         name="recipes_api_v1"
     ),
     path(
-        'recipes/api/v1/<int:pk>',
+        'recipes/api/v1/<int:pk>/',
         views.RecipeDetailApi.as_view(),
         name="recipes_api_v1_detail"
     ),
+    path(
+        'recipes/theory/',
+        views.theory,
+        name='theory'
+    ),
+    path(
+        'recipes/tags/<slug:slug>',
+        views.RecipeListViewTag.as_view(),
+        name='tag'
+    )
 ]
