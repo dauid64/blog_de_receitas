@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from django.utils.text import slugify
-from django.contrib.contenttypes.fields import GenericRelation
 from tag.models import Tag
 
 
@@ -29,7 +28,7 @@ class Recipe(models.Model):
     cover = models.ImageField(upload_to='recipes/covers/%Y/%m/%d/', blank=True, default='')     # noqa: E501
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True, default=None)      # Uma Categoria para varias Receitas # noqa: E501
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)     # Um Autor para varias receitas # noqa: E501
-    tags = GenericRelation(Tag, related_query_name='recipes')
+    tags = models.ManyToManyField(Tag)
 
     def __str__(self):
         return self.title
