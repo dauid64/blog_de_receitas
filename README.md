@@ -56,6 +56,7 @@ Para Login basta colocar seu username registrado e a senha
 # Dashboard
 
 ![image](https://user-images.githubusercontent.com/94979678/211163929-738993f0-f18a-439b-9929-d8b64a32feb0.png)
+
 Mostra suas opções de ver suas receitas, criar receitas e deslogar e ainda consegue editar e excluir uma receita existente e não publicadas ainda clicando nela ou no X
 
 # Criar nova receita
