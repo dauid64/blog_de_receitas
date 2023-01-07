@@ -20,6 +20,30 @@ A Home do site mostra as receitas já avaliadas pelo admin e publicadas, assim t
 
 E com um Menu interativo no canto superior esquerdo que ao clicar ele se abre:
 
-![image](https://user-images.githubusercontent.com/94979678/211163564-529b1a94-621a-45b9-bb52-9d824eb38933.png)
+Deslogado
+![image](https://user-images.githubusercontent.com/94979678/211163588-5bb889b6-933b-4835-bb0b-4507720383e0.png)
+
+Logado
+![image](https://user-images.githubusercontent.com/94979678/211163764-29d2a07f-7510-4b05-b19f-2da36a0032a4.png)
+
+
+# Register
+
+![image](https://user-images.githubusercontent.com/94979678/211163670-34d8f476-7673-426c-9b18-f659fb64bd7c.png)
+Basta colocar as informações corretas e se não obedecer alguma regra irá acionar um erro explicando a causa
+
+
+# Login
+
+![image](https://user-images.githubusercontent.com/94979678/211163640-4032aa50-dc08-4121-87e5-7b05e193e9cf.png)
+
+Para Login basta colocar seu username registrado e a senha
+
+# Dashboard
+
+
+
+
+
 
 
