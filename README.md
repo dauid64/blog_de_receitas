@@ -26,8 +26,7 @@ Deslogado
 
 Logado
 
-![image](https://user-images.githubusercontent.com/94979678/211163764-29d2a07f-7510-4b05-b19f-2da36a0032a4.png)
-
+![image](https://user-images.githubusercontent.com/94979678/211163823-7cabd5bc-b46f-4b3c-950c-6cfe9ea01242.png)
 
 # Register
 
