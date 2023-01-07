@@ -22,7 +22,7 @@ E com um Menu interativo no canto superior esquerdo que ao clicar ele se abre:
 
 Deslogado
 
-![image](https://user-images.githubusercontent.com/94979678/211163588-5bb889b6-933b-4835-bb0b-4507720383e0.png)
+![image](https://user-images.githubusercontent.com/94979678/211163801-6f49ff6c-618a-4333-99de-ace3878cbaf3.png)
 
 Logado
 
