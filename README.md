@@ -21,9 +21,11 @@ A Home do site mostra as receitas já avaliadas pelo admin e publicadas, assim t
 E com um Menu interativo no canto superior esquerdo que ao clicar ele se abre:
 
 Deslogado
+
 ![image](https://user-images.githubusercontent.com/94979678/211163588-5bb889b6-933b-4835-bb0b-4507720383e0.png)
 
 Logado
+
 ![image](https://user-images.githubusercontent.com/94979678/211163764-29d2a07f-7510-4b05-b19f-2da36a0032a4.png)
 
 
