@@ -16,5 +16,10 @@ O site tem o objetivo de um usuário conseguir se cadastrar no site, realizar lo
 
 A Home do site mostra as receitas já avaliadas pelo admin e publicadas, assim tendo controle das receitas que serão mostradas no site. Com a funcionalidade de paginação:
 
-![image](https://user-images.githubusercontent.com/94979678/211163509-2847e6a6-1793-4604-99d0-e2a6e5949f25.png) 
+![image](https://user-images.githubusercontent.com/94979678/211163553-c01ca796-d7dc-4aa3-8fe9-2548a6f764d0.png)
+
+E com um Menu interativo no canto superior esquerdo que ao clicar ele se abre:
+
+![image](https://user-images.githubusercontent.com/94979678/211163564-529b1a94-621a-45b9-bb52-9d824eb38933.png)
+
 
