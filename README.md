@@ -30,6 +30,12 @@ Deslogado
 
 ![image](https://user-images.githubusercontent.com/94979678/211163801-6f49ff6c-618a-4333-99de-ace3878cbaf3.png)
 
+# Detalhes da Receita
+
+![image](https://user-images.githubusercontent.com/94979678/211164137-1583b56a-383b-4b1e-acfc-6da8ea46716f.png)
+
+Ao clicar conseguimos ver todas as informações da receita
+
 Logado
 
 ![image](https://user-images.githubusercontent.com/94979678/211163823-7cabd5bc-b46f-4b3c-950c-6cfe9ea01242.png)
