@@ -31,6 +31,7 @@ Logado
 # Register
 
 ![image](https://user-images.githubusercontent.com/94979678/211163670-34d8f476-7673-426c-9b18-f659fb64bd7c.png)
+
 Basta colocar as informações corretas e se não obedecer alguma regra irá acionar um erro explicando a causa
 
 
