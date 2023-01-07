@@ -4,6 +4,7 @@ Site desenvolvido utilizando o Framework Django baseado em um curso que estou re
 # Deploy
 
 Google Cloud
+
 Link: http://34.170.85.28/
 
 # Objetivo
