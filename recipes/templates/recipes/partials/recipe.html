@@ -13,6 +13,9 @@
     </div>
     <div class="recipe-author">
         <span class="recipe-author-item">
+            {% if recipe.author.profile %}
+                <a href="{% url 'authors:profile' recipe.author.profile.id %}">
+            {% endif %}
             <i class="fas fa-user"></i>
             {% if recipe.author %}
                 {% if recipe.author.first_name %}
@@ -20,6 +23,9 @@
                 {% else %}
                     {{ recipe.author.username }}
                 {% endif %}
+            {% if recipe.author.profile %}
+                </a>
+            {% endif %}
             {% else %}
                 Desconhecido
             {% endif %}
