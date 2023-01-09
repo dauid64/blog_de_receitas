@@ -466,6 +466,7 @@ img {
 @media (max-width: 600px) {
   .main-content-list,
   .form-content-grid {
+    display: block;
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
 }
