@@ -44,7 +44,7 @@ class HomeViewsTest(RecipeTestBase):
 
         self.assertIn('No recipes found', response_content)
 
-    @patch('recipes.views.PER_PAGE', new=8)
+    @patch('recipes.views.site.PER_PAGE', new=8)
     def test_home_is_paginated(self):
         self.make_recipe_in_batch(15)
         response = self.client.get(reverse('recipes:home'))

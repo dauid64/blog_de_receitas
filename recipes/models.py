@@ -8,6 +8,8 @@ from django.core.exceptions import ValidationError
 import os
 from django.conf import settings
 from PIL import Image
+from django.db.models import F, Value
+from django.db.models.functions import Concat
 # from django.utils.translation import gettext_lazy as _
 
 
@@ -18,7 +20,21 @@ class Category(models.Model):
         return self.name
 
 
+class RecipeManager(models.Manager):
+    def get_published(self):
+        return self.filter(
+            is_published=True
+        ).annotate(
+            author_full_name=Concat(
+                F('author__first_name'), Value(' '),
+                F('author__last_name'), Value(' ('),
+                F('author__username'), Value(')'),
+            )
+        ).order_by('-id')
+
+
 class Recipe(models.Model):
+    objects = RecipeManager()
     title = models.CharField(max_length=65)  # verbose_name=_('Título')
     description = models.CharField(max_length=165)
     slug = models.SlugField(unique=True, blank=True)
@@ -47,10 +63,11 @@ class Recipe(models.Model):
         image_full_path = os.path.join(settings.MEDIA_ROOT, image.name)
         image_pillow = Image.open(image_full_path)
         original_width, original_height = image_pillow.size
-        if original_width < new_width:
+        if original_width <= new_width:
             image_pillow.close()
             return
-        new_height = round(new_width * original_height) / original_width
+        new_height = round((new_width * original_height) / original_width)
+
         new_image = image_pillow.resize((new_width, new_height), Image.LANCZOS)
         new_image.save(
             image_full_path,
@@ -67,7 +84,7 @@ class Recipe(models.Model):
 
         if self.cover:
             try:
-                self.resize_image(self.cover, 800)
+                self.resize_image(self.cover, 840)
             except FileNotFoundError:
                 ...
 

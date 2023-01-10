@@ -1,18 +1,16 @@
-import time
-
 import pytest
 from selenium.webdriver.common.alert import Alert
 from selenium.webdriver.common.by import By
 
 from recipes.tests.test_recipe_base import RecipeMixin
-from django.test import override_settings
+# from django.test import override_settings
 from .base import AuthorsBaseTest
 
 
 @pytest.mark.functional_test
 class AuthorsDashboardDeleteTest(AuthorsBaseTest, RecipeMixin):
 
-    @override_settings(DEBUG=True)
+    # @override_settings(DEBUG=True)
     def test_delete_recipe_successfully(self):
         self.make_recipe(is_published=False)
         self.login(True, username='username', password='123456')
