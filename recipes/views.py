@@ -8,6 +8,7 @@ from django.views.generic import ListView, DetailView
 from django.http import JsonResponse
 from django.forms.models import model_to_dict
 from tag.models import Tag
+from django.utils import translation
 
 PER_PAGE = int(os.environ.get('PER_PAGE', 6))
 
@@ -35,8 +36,13 @@ class RecipeListViewBase(ListView):
             ctx.get('recipes'),
             PER_PAGE
         )
+        html_language = translation.get_language()
         ctx.update(
-            {'recipes': page_obj, 'pages': pagination_range}
+            {
+                'recipes': page_obj,
+                'pages': pagination_range,
+                'html_language': html_language
+            }
         )
         return ctx
 

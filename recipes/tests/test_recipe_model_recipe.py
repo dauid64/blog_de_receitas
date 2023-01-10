@@ -10,7 +10,7 @@ class RecipeModelTest(RecipeTestBase):
         return super().setUp()
 
     def make_recipe_no_defaults(self):
-        recipe = Recipe(category=self.make_category(name='Test default Category'), author=self.make_author(username='newuser'), title='Recipe Title', description='Recipe Description', slug='recipe-slug-for-no-defatults', preparation_time=10, preparation_time_unit='Minutos', servings=5, servings_unit='Porções', preparation_steps='Recipe preparation Steps')      # noqa: E501
+        recipe = Recipe(category=self.make_category(name='Test default Category'), author=self.make_author(username='newuser'), title='Recipe Title Test', description='Recipe Description', slug='recipe-slug-for-no-defatults', preparation_time=10, preparation_time_unit='Minutos', servings=5, servings_unit='Porções', preparation_steps='Recipe preparation Steps')      # noqa: E501
         recipe.full_clean()
         recipe.save()
         return recipe

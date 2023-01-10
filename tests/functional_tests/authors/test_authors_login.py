@@ -2,7 +2,7 @@ import pytest
 from django.contrib.auth.models import User
 from django.urls import reverse
 from selenium.webdriver.common.by import By
-
+import time
 from .base import AuthorsBaseTest
 
 

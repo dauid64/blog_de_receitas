@@ -26,7 +26,7 @@ class AuthorsBaseTest(StaticLiveServerTestCase):
                     username=username,
                     password=password
                 )
-        # Usuário abrea a pagina de login
+        # Usuário abre a a pagina de login
         self.browser.get(self.live_server_url + reverse('authors:login'))
         # Usuário vê o formulário de login
         form = self.browser.find_element(By.CLASS_NAME, 'main-form')
@@ -37,4 +37,3 @@ class AuthorsBaseTest(StaticLiveServerTestCase):
         password_field.send_keys(password)
         # Usuário envia o furmulário
         form.submit()
-

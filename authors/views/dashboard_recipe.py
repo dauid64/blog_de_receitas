@@ -7,6 +7,7 @@ from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
+from django.utils.translation import gettext as _
 
 
 @method_decorator(
@@ -58,7 +59,8 @@ class DashboardRecipe(View):
             recipe.preparation_steps_is_html = False
             recipe.is_published = False
             recipe.save()
-            messages.success(request, 'Sua receita foi salva com sucesso!')
+            msg_transale = _('Your recipe has been successfully saved')
+            messages.success(request, msg_transale)
             return redirect(
                 reverse(
                     'authors:dashboard_recipe_edit', args=(
@@ -76,5 +78,6 @@ class DashboardRecipeDelete(DashboardRecipe):
     def post(self, *args, **kwargs):
         recipe = self.get_recipe(self.request.POST.get('id'))
         recipe.delete()
-        messages.success(self.request, 'Deleted successfully')
+        msg_translate = _('Deleted successfully')
+        messages.success(self.request, msg_translate)
         return redirect(reverse('authors:dashboard'))

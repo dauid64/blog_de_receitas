@@ -64,6 +64,6 @@ class AuthorsDashboardCreateTest(AuthorsBaseTest):
         form.submit()
 
         self.assertIn(
-            'Sua receita foi salva com sucesso!',
+            'Your recipe has been successfully saved',
             self.browser.find_element(By.TAG_NAME, 'body').text
         )

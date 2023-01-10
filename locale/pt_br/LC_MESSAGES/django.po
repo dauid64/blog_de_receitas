@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-09 11:14-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\authors\views\all.py:31
+msgid "Your user is created, please log in."
+msgstr "Seu usuário foi criado, por favor efetue log in"
+
+#: .\authors\views\all.py:58
+msgid "Your are logged in."
+msgstr "Voce está logado"
+
+#: .\authors\views\all.py:62
+msgid "Invalid credentials"
+msgstr "Credenciais invalidas"
+
+#: .\authors\views\all.py:65
+msgid "Invalid username or password"
+msgstr "Username ou password invalidos"
+
+#: .\authors\views\all.py:74
+msgid "Invalid logout request"
+msgstr "Request Logout invalida"
+
+#: .\authors\views\all.py:78
+msgid "Invalid Logout user"
+msgstr "Logout user invalido"
+
+#: .\authors\views\all.py:81
+#, fuzzy
+#| msgid "Deleted successfully"
+msgid "Logged out successfully"
+msgstr "Deslogado com sucesso"
+
+#: .\authors\views\dashboard_recipe.py:62
+msgid "Your recipe has been successfully saved"
+msgstr "Sua receita foi salva com sucesso!"
+
+#: .\authors\views\dashboard_recipe.py:81
+#, fuzzy
+#| msgid "Deleted successfully"
+msgid "Deleted successfully."
+msgstr "Deletada com sucesso"
+
+#: .\recipes\templates\recipes\partials\recipe.html:53
+msgid "Preparation"
+msgstr "Preparo"
+
+#: .\recipes\templates\recipes\partials\recipe.html:59
+msgid "Servings"
+msgstr "Porções"
+
+#: .\recipes\templates\recipes\partials\recipe.html:69
+msgid "read more"
+msgstr "ler mais"

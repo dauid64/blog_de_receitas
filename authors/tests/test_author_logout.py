@@ -14,7 +14,7 @@ class AuthorLogoutTest(TestCase):
         )
 
         self.assertIn(
-            'Invalid logout request',
+            'Request Logout invalida',
             response.content.decode('utf-8')
         )
 
@@ -31,7 +31,7 @@ class AuthorLogoutTest(TestCase):
         )
 
         self.assertIn(
-            'Invalid logout user',
+            'Logout user invalido',
             response.content.decode('utf-8')
         )
 
@@ -48,6 +48,6 @@ class AuthorLogoutTest(TestCase):
         )
 
         self.assertIn(
-            'Logged out successfully',
+            'Deslogado com sucesso',
             response.content.decode('utf-8')
         )
