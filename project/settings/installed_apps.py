@@ -8,6 +8,7 @@ INSTALLED_APPS = [
     # django rest framework
     'rest_framework',
     'rest_framework_simplejwt',
+    "corsheaders",
     # Nossos apps
     'recipes',
     'authors',
