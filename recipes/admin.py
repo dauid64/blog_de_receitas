@@ -3,7 +3,7 @@ from .models import Category, Recipe
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    ...
+    list_display = 'id', 'name'
 
 
 class RecipeAdmin(admin.ModelAdmin):

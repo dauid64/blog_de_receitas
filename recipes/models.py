@@ -1,3 +1,4 @@
+
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
@@ -10,6 +11,8 @@ from django.conf import settings
 from PIL import Image
 from django.db.models import F, Value
 from django.db.models.functions import Concat
+import string
+from random import SystemRandom
 # from django.utils.translation import gettext_lazy as _
 
 
@@ -30,7 +33,10 @@ class RecipeManager(models.Manager):
                 F('author__last_name'), Value(' ('),
                 F('author__username'), Value(')'),
             )
-        ).order_by('-id')
+        ) \
+            .order_by('-id') \
+            .select_related('category', 'author') \
+            .prefetch_related()
 
 
 class Recipe(models.Model):
@@ -77,8 +83,13 @@ class Recipe(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            slug = f'{slugify(self.title)}'
-            self.slug = slug
+            rand_letters = ''.join(
+                SystemRandom().choices(
+                    string.ascii_letters + string.digits,
+                    k=5
+                )
+            )
+            self.slug = slugify(f'{self.title}-{rand_letters}')
 
         saved = super().save(*args, **kwargs)
 

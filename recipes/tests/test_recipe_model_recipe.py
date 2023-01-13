@@ -41,4 +41,4 @@ class RecipeModelTest(RecipeTestBase):
         self.recipe.slug = ''
         self.recipe.full_clean()
         self.recipe.save()
-        self.assertEqual(self.recipe.slug, 'recipe-title')
+        self.assertIn('recipe-title', self.recipe.slug)
