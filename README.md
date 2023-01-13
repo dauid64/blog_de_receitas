@@ -7,6 +7,8 @@ Google Cloud
 
 Link: http://34.170.85.28/
 
+# Django
+
 # Objetivo
 Desenvolver um site utilizando o Framework Django, desde do front-end até o back-end
 
@@ -71,7 +73,13 @@ Mostra suas opções de ver suas receitas, criar receitas e deslogar e ainda con
 
 ![image](https://user-images.githubusercontent.com/94979678/211163977-f20a40bd-94e2-4d8c-8736-a70b209d69de.png)
 
+# API
 
+# objetivo
+Desenvolver uma REST API baseada no site feito anteriormente de receitas
+
+# Aprendizados
+Aprendi muito sobre APIs nesse curso e os facilitadores que o django rest framework proporciona, aprendi sobre Class Based Views, JWT, Routers, ViewSets, Paginação, Serializers, métodos http e teste unitários
 
 
 
