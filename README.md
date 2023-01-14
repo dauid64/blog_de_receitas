@@ -81,9 +81,31 @@ Desenvolver uma REST API baseada no site feito anteriormente de receitas
 # Aprendizados
 Aprendi muito sobre APIs nesse curso e os facilitadores que o django rest framework proporciona, aprendi sobre Class Based Views, JWT, Routers, ViewSets, Paginação, Serializers, métodos http e teste unitários
 
+# JWT Login
 
+![image](https://user-images.githubusercontent.com/94979678/212483244-597bbde5-07f9-44c5-bdbb-722acdb7e246.png)
 
+# Get Author
 
+![image](https://user-images.githubusercontent.com/94979678/212483313-c2974c14-b46f-4c6b-bc1d-9bf3dd2a0e96.png)
+
+![image](https://user-images.githubusercontent.com/94979678/212483323-99bad28e-0872-449c-ab2c-c5fc6cf2a3bb.png)
+
+# GET/POST Recipes
+
+![image](https://user-images.githubusercontent.com/94979678/212483341-2374bda7-ec85-42bb-a4e9-a12eae6374a6.png)
+
+![image](https://user-images.githubusercontent.com/94979678/212483364-8521a170-a48b-442b-a9e7-96a00131f82e.png)
+
+![image](https://user-images.githubusercontent.com/94979678/212483356-80d7485d-22bf-4742-9d8f-246075dc32d2.png)
+
+# GET/PATCH/DELETE Recipe
+
+![image](https://user-images.githubusercontent.com/94979678/212483381-35b51c28-b213-49dc-b2da-face63759fa0.png)
+
+![image](https://user-images.githubusercontent.com/94979678/212483387-e3e8a802-1fa3-48d0-a989-bf2f8be08118.png)
+
+![image](https://user-images.githubusercontent.com/94979678/212483400-579d3643-77f1-4909-8839-7c28ec0a8385.png)
 
 
 
