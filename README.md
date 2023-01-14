@@ -83,7 +83,7 @@ Aprendi muito sobre APIs nesse curso e os facilitadores que o django rest framew
 
 # JWT Login
 
-![image](https://user-images.githubusercontent.com/94979678/212483244-597bbde5-07f9-44c5-bdbb-722acdb7e246.png)
+![image](https://user-images.githubusercontent.com/94979678/212483480-0202b1bd-d4b8-4152-b1ee-e860e360ecdd.png)
 
 # Get Author
 
