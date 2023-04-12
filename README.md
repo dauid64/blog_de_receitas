@@ -7,8 +7,6 @@ Google Cloud
 
 Link: http://34.170.85.28/
 
-# Django
-
 # Objetivo
 Desenvolver um site utilizando o Framework Django, desde do front-end até o back-end
 
