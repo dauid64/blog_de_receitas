@@ -4,8 +4,26 @@ Site desenvolvido utilizando o Framework Django baseado em um curso que estou re
 ## 👨‍💻 Aprendizados
 Desenvolvi muito minhas habilidades de lógica e conhecimento web. Meus conhecimentos evoluiram muito nas seguintes áreas de HTML, CSS, Python, Git, Views, URLs, Templates(herança, blocos, if, for e mais), Staticfiles, Models, ORM, testes unitarios e funcionais (Selenium), TDD, Paginação, Functional e Class Based Views, Deploy e Debug Toolbar.
 
-## O Site
-O site tem o objetivo de um usuário conseguir se cadastrar no site, realizar login e criar suas receitas e envia-las para analise para serem publicadas na home do site. Podendo conter essas receitas titulos, descrição, Slug, tempo de preparação, quantidade, modo de preparo (podendo ser HTML), imagem, categoria, Autor, tag e publicada ou não. Algumas somente adicionadas pelo admin
+## 🚀 Instalando o Blog de Receitas
+Para instalar o Blog de Receitas, siga estas etapas:
+
+Linux e macOS:
+```
+python -m venv nome_do_ambiente
+nome_do_ambiente/bin/activate
+pip install -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
+```
+
+Windows:
+```
+python -m venv nome_do_ambiente
+nome_do_ambiente/Scripts/activate
+pip install -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
+```
 
 ## Home 
 
