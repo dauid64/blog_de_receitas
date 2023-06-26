@@ -1,4 +1,4 @@
-# Site_Receitas_Django
+# Blog de Receitas
 Site desenvolvido utilizando o Framework Django baseado em um curso que estou realizando de desenvolvimento Web utilizando Python.
 
 # Objetivo
